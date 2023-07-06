@@ -1,6 +1,6 @@
 var counter = 1;
-$(".planet-title").text("Mercury")
-$(".planet-info").text("Mercury is the closest planet to the Sun and the smallest in our solar system. It has a rocky surface and no atmosphere, experiencing extreme temperature variations between its scorching days and freezing nights.")
+// $(".planet-title").text("Mercury")
+// $(".planet-info").text("Mercury is the closest planet to the Sun and the smallest in our solar system. It has a rocky surface and no atmosphere, experiencing extreme temperature variations between its scorching days and freezing nights.")
 
 const titleArr = ["",
 "Mercury",
@@ -53,12 +53,32 @@ const imageUrls = [
 document.getElementById("planet").classList.add("planet1")
 $("#name-1").addClass("white-text")
 
-function preloadImages(){
-    for(var i = 0; i < imageUrls.length; i++){
-        var img = new Image();
-        img.src = imageUrls[i];
+function preloadImages() {
+    var imagesLoaded = 0;
+  
+    for (var i = 0; i < imageUrls.length; i++) {
+      var img = new Image();
+      img.src = imageUrls[i];
+      img.onload = function() {
+        imagesLoaded++;
+  
+        if (imagesLoaded === imageUrls.length) {
+          // All images have finished loading
+          $(".planet-title").text(titleArr[counter]);
+          $(".planet-info").text(infoArr[counter]);
+          $('#name-1').arctext({ radius: 400 });
+          $('#name-2').arctext({ radius: 400 });
+          $('#name-3').arctext({ radius: 400 });
+          $('#name-4').arctext({ radius: 400 });
+          $('#name-5').arctext({ radius: 400 });
+          $('#name-6').arctext({ radius: 400 });
+          $('#name-7').arctext({ radius: 400 });
+          $('#name-8').arctext({ radius: 400 });
+          $('#name-9').arctext({ radius: 600 });
+        }
+      };
     }
-}
+  }
 
 document.querySelector(".back-button").addEventListener("click", () => {
     if(counter >= 2){
@@ -104,14 +124,14 @@ document.querySelector(".forward-button").addEventListener("click", () => {
     }
 })
 
-    $('#name-1').arctext({radius: 400});
-    $('#name-2').arctext({radius: 400});
-    $('#name-3').arctext({radius: 400});
-    $('#name-4').arctext({radius: 400});
-    $('#name-5').arctext({radius: 400});
-    $('#name-6').arctext({radius: 400});
-    $('#name-7').arctext({radius: 400});
-    $('#name-8').arctext({radius: 400});
-    $('#name-9').arctext({radius: 600});
+    // $('#name-1').arctext({radius: 400});
+    // $('#name-2').arctext({radius: 400});
+    // $('#name-3').arctext({radius: 400});
+    // $('#name-4').arctext({radius: 400});
+    // $('#name-5').arctext({radius: 400});
+    // $('#name-6').arctext({radius: 400});
+    // $('#name-7').arctext({radius: 400});
+    // $('#name-8').arctext({radius: 400});
+    // $('#name-9').arctext({radius: 600});
     
     window.addEventListener("load", preloadImages);
