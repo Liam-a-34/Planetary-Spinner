@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("./images/cropped-5120-2880-1080566.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.planetary-main{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.text-div{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: monospace;
+    text-align: center;
+}
+
+.planet-title{
+    font-size: 50px;
+    background-color: rgba(0, 0, 0, 0.793);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    transition: all .25s;
+}
+
+.planet-info{
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.793);
+    padding: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: all .25s;
+}
+
+.spinner-div{
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid rgba(255, 255, 255, 0.559);
+    border-radius: 100%;
+    padding: 50px;
+}
+
+#planet{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform-origin: center;
+    transition: all .5s;
+}
+
+.dot{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 100%;
+    position: absolute;
+    top: 250px;
+    left: -34px
+}
+
+.planet1{
+    background-image: url("./images/mercury.png");
+    transform: rotate(10deg);
+}
+
+.planet2{
+    background-image: url("./images/venus.png");
+    transform: rotate(25deg);
+}
+
+.planet3{
+    background-image: url("./images/earth.png");
+    transform: rotate(40deg);
+}
+
+.planet4{
+    background-image: url("./images/mars.png");
+    transform: rotate(55deg);
+}
+
+.planet5{
+    background-image: url("./images/jupiter.png");
+    transform: rotate(70deg);
+}
+
+.planet6{
+    background-image: url("./images/saturn.png");
+    transform: rotate(85deg);
+}
+
+.planet7{
+    background-image: url("./images/uranus.png");
+    transform: rotate(100deg);
+}
+
+.planet8{
+    background-image: url("./images/neptune.png");
+    transform: rotate(115deg);
+}
+
+.planet9{
+    background-image: url("./images/pluto.png");
+    transform: rotate(130deg);
+}
+
+.back-button{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: absolute;
+    left: 15%;
+    top: 80%;
+}
+
+.forward-button{
+   width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: absolute;
+    right: 15%;
+    top: 80%; 
+}
+
+button{
+    background-color: rgba(255, 255, 255, 0.707);
+    border: none;
+    font-size: 40px;
+    color: rgb(59, 59, 59)
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.planet-name{
+    position: absolute;
+    font-size: 35px;
+     font-family: sans-serif;
+     top: -200px;
+     color: rgba(180, 180, 180, 0.805);
+     transition: all .5s;
+}
+
+#name-1{
+    top: 180px;
+    left: -70px;
+    transform: rotate(-59deg);
+}
+
+#name-2{
+    top: 55px;
+    left: 55px;
+    transform: rotate(-44deg);
+}
+
+#name-3{
+    top: -25px;
+    left: 180px;
+    transform: rotate(-29deg); 
+}
+
+#name-4{
+    top: -75px;
+    left: 310px;
+    transform: rotate(-15deg); 
+}
+
+#name-5{
+    top: -90px;
+    left: 445px;
+    transform: rotate(); 
+}
+
+#name-6{
+    top: -70px;
+    left: 600px;
+    transform: rotate(16deg); 
+}
+
+#name-7{
+    top: -10px;
+    left: 730px;
+    transform: rotate(30deg); 
+}
+
+#name-8{
+    top: 85px;
+    left: 840px;
+    transform: rotate(45deg);
+}
+
+#name-9{
+    white-space:nowrap;
+    top: 205px;
+    left: 953px;
+    transform: rotate(59deg);
+}
+
+.white-text{
+    color: white
+}
+
+.fade{
+    opacity: 0;
+}
+
+@media screen and (max-width: 1400px){
+    .planetary-main{
+        scale: 0.8;
+        bottom: -10%;
+    }
+
+    .text-div{
+        top: 0;
+        width: 800px;
+    }
+}
+
+@media screen and (max-height: 700px){
+    .text-div{
+        top: -10%
+    }
+}
+
+
