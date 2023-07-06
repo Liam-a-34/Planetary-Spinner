@@ -36,10 +36,29 @@ const infoArr = [
 "Pluto, once considered the ninth planet, is now classified as a dwarf planet. It resides in the Kuiper Belt, a region beyond Neptune, and is composed of rock and ice. Pluto has a highly eccentric orbit and a complex system of moons, including its largest moon, Charon.",
 ]
 
+const imageUrls = [
+    "./images/mercury.png",
+    "./images/venus.png",
+    "./images/earth.png",
+    "./images/mars.png",
+    "./images/jupiter.png",
+    "./images/saturn.png",
+    "./images/uranus.png",
+    "./images/neptune.png",
+    "./images/pluto.png",
+]
+
 
 
 document.getElementById("planet").classList.add("planet1")
 $("#name-1").addClass("white-text")
+
+function preloadImages(){
+    for(var i = 0; i < imageUrls.length; i++){
+        var img = new Image();
+        img.src = imageUrls[i];
+    }
+}
 
 document.querySelector(".back-button").addEventListener("click", () => {
     if(counter >= 2){
@@ -95,3 +114,4 @@ document.querySelector(".forward-button").addEventListener("click", () => {
     $('#name-8').arctext({radius: 400});
     $('#name-9').arctext({radius: 600});
     
+    window.addEventListener("load", preloadImages);
