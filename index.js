@@ -37,15 +37,15 @@ const infoArr = [
 ]
 
 const imageUrls = [
-    "./images/mercury.png",
-    "./images/venus.png",
-    "./images/earth.png",
-    "./images/mars.png",
-    "./images/jupiter.png",
-    "./images/saturn.png",
-    "./images/uranus.png",
-    "./images/neptune.png",
-    "./images/pluto.png",
+    "/images/mercury.png",
+    "/images/venus.png",
+    "/images/earth.png",
+    "/images/mars.png",
+    "/images/jupiter.png",
+    "/images/saturn.png",
+    "/images/uranus.png",
+    "/images/neptune.png",
+    "/images/pluto.png",
 ]
 
 
